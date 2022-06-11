@@ -13,6 +13,15 @@ https://www.youtube.com/watch?v=1zmPLei5YrY&list=PLab_if3UBk98jBTmyxShFVirMbgfFY
 
 > poetry add pyjwt
 
+> poetry add flask_sqlalchemy
+
+> docker run -d -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_USER=sergio -e POSTGRES_PASSWORD=my-password -e POSTGRES_DB=backenddb -p 5432:5432 postgres:13
+
+> pip install psycopg2-binary (did not worked)
+
+> poetry add psycopg2-binary
+
+
 ===========
 to start
 ===========
