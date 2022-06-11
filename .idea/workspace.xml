@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="jwt auth">
-      <change afterPath="$PROJECT_DIR$/src/entities/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/country.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/message.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/extensions.py" afterDir="false" />
+    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="basic db operations">
+      <change afterPath="$PROJECT_DIR$/src/dto/credentials.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/user_creation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/groups.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/country.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/country.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/error.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654929333523</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="basic db operations">
+      <created>1654939787902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654939787902</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +147,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="basic backend" />
     <MESSAGE value="jwt auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="jwt auth" />
+    <MESSAGE value="basic db operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic db operations" />
   </component>
 </project>

@@ -21,6 +21,10 @@ https://www.youtube.com/watch?v=1zmPLei5YrY&list=PLab_if3UBk98jBTmyxShFVirMbgfFY
 
 > poetry add psycopg2-binary
 
+> poetry add marshmallow_sqlalchemy
+
+
+
 
 ===========
 to start

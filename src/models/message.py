@@ -1,7 +1,7 @@
 from sqlalchemy.orm import relationship
 
 from src import db
-from src.entities.user import User
+from src.models.user import User
 
 
 class Message(db.Model):

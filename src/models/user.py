@@ -1,7 +1,8 @@
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, auto_field, SQLAlchemySchema
 from sqlalchemy.orm import relationship
 
 from src import db
-from src.entities.country import Country
+from src.models.country import Country
 
 
 class User(db.Model):
@@ -26,3 +27,22 @@ class Profile(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
 
     user = relationship(User.__name__, uselist=False, back_populates="profile")
+
+class UserSchema(SQLAlchemySchema):
+    class Meta:
+        model = User
+        include_relationships = True
+        load_instance = True
+
+    # to select the field to send
+    id = auto_field()
+    username = auto_field()
+    email = auto_field()
+
+
+
+class ProfileSchema(SQLAlchemyAutoSchema):
+    class Meta:
+        model = Profile
+        include_relationships = True
+        load_instance = True

@@ -3,10 +3,12 @@ from sqlalchemy import select, insert
 from werkzeug.security import generate_password_hash
 
 from src import db
-from src.entities.user import User
+from src.dto.user_creation import UserCreationSchema
+from src.models.user import User
 from src.routes import token_auth
 
 users_bp = Blueprint("users", __name__, url_prefix="/users")
+user_creation_schema = UserCreationSchema()
 
 
 @users_bp.route("", methods=["GET"])
@@ -40,6 +42,8 @@ def create_user():
     # print(request.files)
     # print(request.args)
 
+    new_user = user_creation_schema.load(d)
+
     # style 1.X
     # u = User()
     # u.username = d["username"]
@@ -49,9 +53,13 @@ def create_user():
 
     # style 2.0
     try:
+        # db.session.execute(
+        #     insert(User).values(username=d["username"], email=d["email"],
+        #                         password=generate_password_hash(d["password"])))
         db.session.execute(
-            insert(User).values(username=d["username"], email=d["email"],
-                                password=generate_password_hash(d["password"])))
+            insert(User).values(username=new_user.username,
+                                email=new_user.email,
+                                password=generate_password_hash(new_user.password)))
         db.session.commit()
         print("added")
     except Exception as e:

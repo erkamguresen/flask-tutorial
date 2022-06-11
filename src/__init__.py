@@ -5,6 +5,7 @@ from flask import Flask
 from src.extensions import db
 from src.routes.auth import auth_bp
 from src.routes.error import error_bp
+from src.routes.groups import groups_bp
 from src.routes.health import health_bp
 from src.routes.users import users_bp
 
@@ -24,5 +25,6 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(health_bp)
     app.register_blueprint(users_bp)
+    app.register_blueprint(groups_bp)
     app.register_blueprint(error_bp)
     return app
