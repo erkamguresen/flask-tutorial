@@ -25,4 +25,6 @@ def handle_not_found(err):
 
 @error_bp.app_errorhandler(Exception)
 def handle_generic_exception(err):
+    print(type(err))
+    print(err)
     return jsonify({"message":"Unknown error. Please check the logs for more details."}), 500

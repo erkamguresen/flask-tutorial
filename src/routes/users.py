@@ -1,13 +1,14 @@
-from flask import Blueprint, request, Response, jsonify
+from flask import Blueprint, request, jsonify
 from sqlalchemy import select, insert
 from werkzeug.security import generate_password_hash
 
 from src import db
 from src.dto.user_creation import UserCreationSchema
-from src.models.user import User
+from src.models.user import User, UserSchema
 from src.routes import token_auth
 
 users_bp = Blueprint("users", __name__, url_prefix="/users")
+user_schema = UserSchema()
 user_creation_schema = UserCreationSchema()
 
 
@@ -28,11 +29,11 @@ def get_all_users():
     # style 2.0
     users = db.session.scalars(select(User)).all()
     # return jsonify(all_users)
-    return jsonify([{"id": u.id, "username": u.username} for u in users])
+    # return jsonify([{"id": u.id, "username": u.username} for u in users])
+    return jsonify(user_schema.dump(users, many=True))
 
 
 @users_bp.route("", methods=["POST"])
-@token_auth.login_required
 def create_user():
     d = request.json
     print(d)
@@ -72,15 +73,21 @@ def create_user():
     }), 201
 
 
-@users_bp.route("/<user_id>", methods=["GET"])
-@token_auth.login_required
-def get_user(user_id):
-    # style 1.X
-    # u = User.query.filter(User.id == user_id).one()
+# @users_bp.route("/<user_id>", methods=["GET"])
+# @token_auth.login_required
+# def get_user(user_id):
+#     # style 1.X
+#     # u = User.query.filter(User.id == user_id).one()
+#
+#     # style 2.0
+#     user = db.session.scalars(select(User).where(User.id == user_id)).one()
+#     return jsonify({
+#         "id": user.id,
+#         "username": user.username
+#     })
 
-    # style 2.0
-    user = db.session.scalars(select(User).where(User.id == user_id)).one()
-    return jsonify({
-        "id": user.id,
-        "username": user.username
-    })
+@users_bp.route("/<username>")
+@token_auth.login_required
+def get_user(username):
+    user = db.session.scalars(select(User).where(User.username == username)).one()
+    return jsonify(user_schema.dump(user))

@@ -1,6 +1,4 @@
-from flask import jsonify, request, Response
-
-from src import create_app
+from src import create_app, db, feed_db
 
 app = create_app()
 
@@ -10,4 +8,9 @@ app = create_app()
 #     return "ok"
 
 if __name__ == "__main__":
+    db.drop_all()
+    db.create_all()
+    feed_db()
     app.run(host="0.0.0.0")
+
+

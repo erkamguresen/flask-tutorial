@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=1zmPLei5YrY&list=PLab_if3UBk98jBTmyxShFVirMbgfFY
 
 > poetry add marshmallow_sqlalchemy
 
-
+> poetry add pytest -D (already here)
 
 
 ===========

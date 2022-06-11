@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="basic db operations">
-      <change afterPath="$PROJECT_DIR$/src/dto/credentials.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/user_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/groups.py" afterDir="false" />
+    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="basic schema and validation">
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/dto/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/dto/test_credentials.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/dto/test_users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/routes/test_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/routes/test_groups.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/routes/test_users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/country.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/country.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/user_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/user_creation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/error.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_src.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask-tutorial" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,9 +83,61 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask-tutorial" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\erkam\Documents\GitHub\flask-tutorial\tests\conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_users.test_validate_password" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="flask-tutorial" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/dto" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_users.test_validate_password&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="flask-tutorial" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.__main__" />
+        <item itemvalue="Python.conftest" />
+        <item itemvalue="Python tests.Python tests for test_users.test_validate_password" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654939787902</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basic schema and validation">
+      <created>1654973235947</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654973235947</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +207,18 @@
     <MESSAGE value="basic backend" />
     <MESSAGE value="jwt auth" />
     <MESSAGE value="basic db operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic db operations" />
+    <MESSAGE value="basic schema and validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic schema and validation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/routes/test_users.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

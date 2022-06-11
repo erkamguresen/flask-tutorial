@@ -1,25 +1,23 @@
 import re
 
-from marshmallow import Schema, fields, validates, ValidationError, post_load
+from marshmallow import Schema, fields, post_load, validates, ValidationError
 
 from src.models.user import User
 
 
 class UserCreationSchema(Schema):
-    username = fields.String(Required=True)
-    password = fields.String(Required=True)
-    email = fields.String(Required=True)
+    username = fields.String(required=True)
+    password = fields.String(required=True)
+    email = fields.String(required=True)
 
     @validates("password")
     def validates_password(self, value):
         if len(value) < 8:
-            raise ValidationError("Password must be at least 8 characters long.")
-
-        if not any(c.isupper() for c in value):
-            raise ValidationError("Password must contain at least one uppercase character.")
-
-        if not any(c.islower() for c in value):
-            raise ValidationError("Password must contain at least one lowercase character.")
+            raise ValidationError("Password must longer than 8")
+        if not any(char.isupper() for char in value):
+            raise ValidationError("Password must contain upper case")
+        if not any(char.islower() for char in value):
+            raise ValidationError("Password must contain lower case")
 
     @validates("email")
     def validates_email(self, value):
