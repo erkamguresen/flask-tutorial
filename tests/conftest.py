@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy import delete
 from werkzeug.security import generate_password_hash
 
-from src import create_app, db, User, Country
+from src import Country, User, create_app, db
 
 
 @pytest.fixture(scope="session")

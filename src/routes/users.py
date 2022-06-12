@@ -1,5 +1,5 @@
-from flask import Blueprint, request, jsonify
-from sqlalchemy import select, insert
+from flask import Blueprint, jsonify, request
+from sqlalchemy import insert, select
 from werkzeug.security import generate_password_hash
 
 from src import db
@@ -58,19 +58,17 @@ def create_user():
         #     insert(User).values(username=d["username"], email=d["email"],
         #                         password=generate_password_hash(d["password"])))
         db.session.execute(
-            insert(User).values(username=new_user.username,
-                                email=new_user.email,
-                                password=generate_password_hash(new_user.password)))
+            insert(User).values(
+                username=new_user.username, email=new_user.email, password=generate_password_hash(new_user.password)
+            )
+        )
         db.session.commit()
         print("added")
     except Exception as e:
         print(e)
 
     # return Response(status=204)
-    return jsonify({
-        "username": d["username"],
-        "email" : d["email"]
-    }), 201
+    return jsonify({"username": d["username"], "email": d["email"]}), 201
 
 
 # @users_bp.route("/<user_id>", methods=["GET"])
@@ -85,6 +83,7 @@ def create_user():
 #         "id": user.id,
 #         "username": user.username
 #     })
+
 
 @users_bp.route("/<username>")
 @token_auth.login_required

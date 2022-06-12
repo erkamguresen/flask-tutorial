@@ -1,5 +1,5 @@
 import jwt
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, jsonify, request
 from sqlalchemy import select
 from werkzeug.security import check_password_hash
 
@@ -23,7 +23,7 @@ def login():
 
     user = db.session.scalars(select(User).where(User.username == credentials.username)).one_or_none()
     if not user:
-        return jsonify({"error" : "no user found in database"}), 404
+        return jsonify({"error": "no user found in database"}), 404
 
     if not check_password_hash(user.password, credentials.password):
         raise RuntimeError("Invalid password")

@@ -1,4 +1,4 @@
-__version__ = '0.1.0'
+__version__ = "0.1.0"
 
 from flask import Flask
 from sqlalchemy import insert, select
@@ -8,7 +8,7 @@ from src.extensions import db
 from src.models.country import Country
 from src.models.group import Group
 from src.models.message import Message
-from src.models.user import User, Profile
+from src.models.user import Profile, User
 from src.routes.auth import auth_bp
 from src.routes.error import error_bp
 from src.routes.groups import groups_bp
@@ -41,16 +41,22 @@ def feed_db():
     db.session.execute(insert(Country).values(code="ES", name="Spain"))
 
     country = db.session.scalars(select(Country).where(Country.name == "Spain")).one()
-    db.session.execute(insert(User).values(
-        username="jane",
-        email="janedoe@mail.com",
-        password=generate_password_hash("my-password"),
-        country_id=country.id))
-    db.session.execute(insert(User).values(
-        username="john",
-        email="johndoe@mail.com",
-        password=generate_password_hash("his-password"),
-        country_id=country.id))
+    db.session.execute(
+        insert(User).values(
+            username="jane",
+            email="janedoe@mail.com",
+            password=generate_password_hash("my-password"),
+            country_id=country.id,
+        )
+    )
+    db.session.execute(
+        insert(User).values(
+            username="john",
+            email="johndoe@mail.com",
+            password=generate_password_hash("his-password"),
+            country_id=country.id,
+        )
+    )
 
     user = db.session.scalars(select(User).where(User.username == "john")).one()
     db.session.execute(insert(Message).values(content="This is my first post", user_id=user.id))

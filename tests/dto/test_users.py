@@ -14,16 +14,12 @@ from src.dto.user_creation import UserCreationSchema
         ("ABCDE12345", False),
         ("12345678", False),
         ("Abc123", False),
-    ]
+    ],
 )
 def test_validate_password(password, valid):
     # given
     schema = UserCreationSchema()
-    data = {
-        "username": "john",
-        "password": password,
-        "email": "john@doe.com"
-    }
+    data = {"username": "john", "password": password, "email": "john@doe.com"}
 
     # when
     try:
@@ -38,6 +34,7 @@ def test_validate_password(password, valid):
     except ValidationError:
         assert not valid
 
+
 @pytest.mark.parametrize(
     "email,valid",
     [
@@ -48,16 +45,12 @@ def test_validate_password(password, valid):
         ("sergio@mail", False),
         ("sergio.mail.com", False),
         ("sergio@mail@com", False),
-    ]
+    ],
 )
 def test_validate_email(email, valid):
     # given
     schema = UserCreationSchema()
-    data = {
-        "username": "sergio",
-        "password": "Abcde12345",
-        "email": email
-    }
+    data = {"username": "sergio", "password": "Abcde12345", "email": email}
 
     # when
     try:

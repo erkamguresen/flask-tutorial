@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="basic schema and validation">
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/dto/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/dto/test_credentials.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/dto/test_users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/routes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/routes/test_auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/routes/test_groups.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/routes/test_users.py" afterDir="false" />
+    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="test, 2 failing">
+      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dto/user_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/user_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/country.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/country.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/error.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/groups.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/groups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/health.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/health.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_src.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/dto/test_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/dto/test_credentials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/routes/test_users.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/routes/test_users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654973235947</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test, 2 failing">
+      <created>1654981892542</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654981892542</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,15 +219,26 @@
     <MESSAGE value="jwt auth" />
     <MESSAGE value="basic db operations" />
     <MESSAGE value="basic schema and validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic schema and validation" />
+    <MESSAGE value="test, 2 failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="test, 2 failing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/routes/users.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/routes/users.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/routes/test_users.py</url>
           <line>60</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

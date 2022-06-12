@@ -7,7 +7,7 @@ from src.models.user import User
 users_to_groups_association = db.Table(
     "users_to_groups_association",
     db.Column("user_id", db.Integer, db.ForeignKey(User.id), primary_key=True),
-    db.Column("group_id", db.Integer, db.ForeignKey("group.id"), primary_key=True)
+    db.Column("group_id", db.Integer, db.ForeignKey("group.id"), primary_key=True),
 )
 
 

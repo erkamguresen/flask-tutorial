@@ -15,6 +15,16 @@ marshmallow-sqlalchemy = "^0.28.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pre-commit = "^2.19.0"
+
+[tool.mypy]
+
+[tool.black]
+line_length = 120
+
+[tool.isort]
+profile = "black"
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

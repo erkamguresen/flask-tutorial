@@ -25,6 +25,13 @@ https://www.youtube.com/watch?v=1zmPLei5YrY&list=PLab_if3UBk98jBTmyxShFVirMbgfFY
 
 > poetry add pytest -D (already here)
 
+> poetry add -D pre-commit
+
+> poetry run pre-commit install
+
+> poetry run pre-commit run -a
+
+
 
 ===========
 to start
