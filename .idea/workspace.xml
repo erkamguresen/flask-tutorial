@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="heroku config test poetry in procfile">
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="heroku procfile">
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655132601367</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="heroku procfile">
+      <created>1655134110007</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134110007</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +255,8 @@
     <MESSAGE value="heroku config test2 requirements.txt" />
     <MESSAGE value="heroku config test2 requirements.txt with gunicorn" />
     <MESSAGE value="heroku config test poetry in procfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="heroku config test poetry in procfile" />
+    <MESSAGE value="heroku procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="heroku procfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
