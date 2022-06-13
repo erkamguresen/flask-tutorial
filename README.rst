@@ -39,6 +39,12 @@ to start
 
 > poetry run python -m src
 
+===========
+for heroku
+===========
+
+> poetry export -f requirements.txt --output requirements.txt
+
 
 
 
