@@ -42,6 +42,7 @@ to start
 ===========
 for heroku
 ===========
+> poetry add  gunicorn
 
 > poetry export -f requirements.txt --output requirements.txt
 
