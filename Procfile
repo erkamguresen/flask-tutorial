@@ -1,1 +1,1 @@
-web: gunicorn src.app
+web: poetry run python -m src
