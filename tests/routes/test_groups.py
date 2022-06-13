@@ -34,3 +34,7 @@ def test_get_all_groups_validate(flask_app):
         data = response.json
         assert len(data) == 2
         mocked_session.assert_called_once()
+
+
+# @mock.patch("src.db.session.scalars", side_effect=["data1","data2","data3"]) to return the values in sequence (not fixed value)
+# @mock.patch("src.db.session.scalars", side_effect=Exception("Boom!")) to return an exception
