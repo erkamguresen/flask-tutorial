@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="heroku config test2 requirements.txt">
-      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    <list default="true" id="a6655461-6852-4680-837b-a58a3a1b3ab4" name="Changes" comment="heroku config test poetry in procfile">
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655132027997</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="heroku config test2 requirements.txt with gunicorn">
+      <created>1655132228896</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655132228896</updated>
+    </task>
+    <task id="LOCAL-00012" summary="heroku config test poetry in procfile">
+      <created>1655132601367</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655132601367</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,7 +248,9 @@
     <MESSAGE value="heroku config test" />
     <MESSAGE value="heroku config test2" />
     <MESSAGE value="heroku config test2 requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="heroku config test2 requirements.txt" />
+    <MESSAGE value="heroku config test2 requirements.txt with gunicorn" />
+    <MESSAGE value="heroku config test poetry in procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="heroku config test poetry in procfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
